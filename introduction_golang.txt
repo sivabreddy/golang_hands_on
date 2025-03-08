@@ -1,7 +1,9 @@
 - opensource language by google, 2007.
 - similar like c/c++
 - High performance and focus on concurrency. Popular for tasks that benefit from multi-threading.
-- Go comes with a standard library
+- Go comes with a standard library.
 - Go is a type-safe language - static typing
 - Go is a compiled language. It must be compiled before it can be run.
 - Go popular use-cases - Networking & APIs , Microservices, CLI Tools.
+
+Help: https://github.com/mschwarzmueller/go-complete-guide-resources
