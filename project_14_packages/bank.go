@@ -1,11 +1,18 @@
 package main
 
 import (
+	// packages part of standard library
 	"fmt"
+	// packages part of other packages
 	// Important: always the functions in the other packages when importing need to use the package name in the go mod
 	// functions in the other packages must be defined with captial letter
 	// when using those functions from other packages we need to use the <package name>.<function name>
 	"example.com/packages/fileOps"
+
+	// Third-party packages
+	// go package discovery page eg: go-randomdata, you find repository, documentation etc.
+	// installation command: go get <package path from github>
+	"github.com/Pallinder/go-randomdata"
 )
 
 const accountBalanceFile = "balance.txt"
@@ -43,6 +50,8 @@ func main() {
 		// for i:=0; i < 2; i++ {
 		// to run in infinite loop we don't need to specify the condition.
 		fmt.Println("Welcome to Go Bank")
+	    fmt.Println("reach us 24/7",randomdata.PhoneNumber())
+		
         for {
 			
             displayOptions()
