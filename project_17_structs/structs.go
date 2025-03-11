@@ -10,6 +10,7 @@ type User struct {
 	firstName string
 	lastName  string
 	birthdate string
+	//Time is also struct provided by the time package
 	createdAt time.Time
 }
 
@@ -17,22 +18,24 @@ func main() {
 	userFirstName := getUserData("Please enter your first name: ")
 	userLastName := getUserData("Please enter your last name: ")
 	userBirthdate := getUserData("Please enter your birthdate (MM/DD/YYYY): ")
-    // here the appUser is a variable of type User
+
+    // Here the "appUser" is a variable of type User
 	var appUser User
     // order of the fields is important in shorthand notation
 	// appUser := User { userFirstName, userLastName, userBirthdate, time.Now() }
-	// In below approach if we don't have any values, we can skip those.
+	// In below long hand notation approach, if we don't have any values, we can skip those.
 	appUser = User {
 		firstName: userFirstName,
 		lastName: userLastName,
 		birthdate: userBirthdate,
-		createdAt: time.Now(),
+		createdAt: time.Now(), // comma is needed even if it is a last memeber
 	}
-	outputUserDetails(appUser)
+
+	outputUserDetails(&appUser)
 
 }
 
-func outputUserDetails(u User){
+func outputUserDetails(u *User){
     fmt.Println(u.firstName, u.lastName, u.birthdate,u.createdAt)
 }
 
