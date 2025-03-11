@@ -13,7 +13,7 @@ func main() {
     // Here the "appUser" is a variable of type User
 	var appUser *user.User
 	
-    appUser, err := user.NewUser(userFirstName, userLastName, userBirthdate)
+    appUser, err := user.New(userFirstName, userLastName, userBirthdate)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -26,15 +26,6 @@ func main() {
 	appUser.OutputUserDetails() //output details again
 
 }
-
-// output
-// sivas-MacBook-Pro project_20_constructor_functions % ./constructor 
-// Please enter your first name: siva
-// Please enter your last name: bojja
-// Please enter your birthdate (MM/DD/YYYY): 11/01/1988
-// siva bojja 11/01/1988 2025-03-11 18:10:05.869602 +0530 IST m=+9.222879668
-//   11/01/1988 2025-03-11 18:10:05.869602 +0530 IST m=+9.222879668
-
 
 func getUserData(promptText string) string {
 	fmt.Print(promptText)

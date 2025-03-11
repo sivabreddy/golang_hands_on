@@ -28,7 +28,8 @@ func (u *User) ClearUserName() {
 
 
 // creations or constructor function , returns a pointer
-func NewUser(userFirstName, userLastName, userBirthdate string) (*User, error){
+// try to give constructor function name as New <= it is a practice in production code
+func New(userFirstName, userLastName, userBirthdate string) (*User, error){
 	//validations
 	if userFirstName == "" || userLastName == "" || userBirthdate == "" {
 		return nil, 
