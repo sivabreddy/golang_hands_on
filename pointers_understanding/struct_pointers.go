@@ -15,7 +15,7 @@ func structPointers() {
 	p := &person{name: "John", age: 30} //pointer to struct
 	fmt.Println(p)
 	fmt.Println(*p)
-	fmt.Println((p).name,(p).age) 
+	fmt.Println((p).name,(p).age) // (Go auto-dereferences pointers to structs)
 	fmt.Println((*p).name,(*p).age) 
 }
 // output
