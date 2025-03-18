@@ -29,6 +29,9 @@ func (u *User) ClearUserName() {
 
 // creations or constructor function , returns a pointer
 // try to give constructor function name as New <= it is a practice in production code
+// return type for the constructor function is pointer to the struct
+// struct name and fields must start with uppercase to be accessible in other packages
+
 func New(userFirstName, userLastName, userBirthdate string) (*User, error){
 	//validations
 	if userFirstName == "" || userLastName == "" || userBirthdate == "" {

@@ -29,6 +29,7 @@ func main() {
 func getUserData(promptText string) string {
 	fmt.Print(promptText)
 	var value string
+	// difference between Scan and Scanln is that Scanln will wait for the user to enter a value and press enter
 	fmt.Scanln(&value)
 	return value
 }
