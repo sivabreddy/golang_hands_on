@@ -18,6 +18,10 @@ type User struct {
 func (u *User) outputUserDetails() { 
     fmt.Println(u.firstName, u.lastName, u.birthdate,u.createdAt)
 }
+// To mutate the receiver, define the method with a pointer receiver (*T). 
+// Without a pointer, the method operates on a copy of the receiver, leaving the original unchanged.
+
+// mutation of the struct is possible
 // copy of values are passed to the function
 func (u *User) clearUserName() {
    u.firstName = ""
