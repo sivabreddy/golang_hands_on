@@ -15,6 +15,7 @@ type User struct {
 }
 // function attached to a struct is called method
 // receiver is the variable that is used to call the method
+// (u User) is called the receiver argument / special parameter
 func (u User) outputUserDetails(){
     fmt.Println(u.firstName, u.lastName, u.birthdate,u.createdAt)
 }
